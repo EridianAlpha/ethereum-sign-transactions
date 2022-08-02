@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const ethers = require('ethers')
 const readlineSync = require('readline-sync')
 
@@ -6,7 +8,6 @@ let customHttpProvider
 async function main() {
 
   let chainId = parseInt(await readlineSync.question("Chain Ids\n1 - Mainnet\n5 - Goerli\nEnter chainId: "))
-
 
   // ********************
   // DEFINE RPC PROVIDER
@@ -31,8 +32,7 @@ async function main() {
 
   console.log('\nMY WALLET ADDRESS')
   console.log(wallet.address)
-  console.log('\n')
-
+  console.log()
 
   // **********************
   // TRANSACTION VARIABLES
