@@ -5,7 +5,7 @@ let customHttpProvider
 
 async function main() {
 
-  let chainId = parseInt(await readlineSync.question("Chain Ids\n1 - Mainnet\n3 - Ropsten\nEnter chainId: "))
+  let chainId = parseInt(await readlineSync.question("Chain Ids\n1 - Mainnet\n5 - Goerli\nEnter chainId: "))
 
 
   // ********************
