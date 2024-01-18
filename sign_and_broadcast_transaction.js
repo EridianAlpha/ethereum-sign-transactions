@@ -30,9 +30,19 @@ async function main() {
   let walletDerivativeCombined = `m/44'/60'/0'/0/` + walletDerivative
   let wallet = new ethers.Wallet.fromMnemonic(mnemonic, walletDerivativeCombined)
 
-  console.log('\nMY WALLET ADDRESS')
+  console.log('\nMY WALLET PUBLIC ADDRESS')
   console.log(wallet.address)
   console.log()
+
+  // *****************
+  // VIEW PRIVATE KEY
+  // *****************
+  if (readlineSync.keyInYN("View wallet private key? ")) {
+    console.log('\nMY WALLET PRIVATE ADDRESS')
+    console.log(wallet.privateKey)
+    console.log()
+  }
+
 
   // **********************
   // TRANSACTION VARIABLES
